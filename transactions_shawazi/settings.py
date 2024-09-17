@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'rest_framework',
     'transactions',
+    'contract',
 ]
 
 MIDDLEWARE = [
@@ -136,6 +137,20 @@ LAND_TRANSACTION_ABI_PATH = os.path.join(SMART_CONTRACT_DIR, 'LandTransaction.js
 
 # In settings.py
 
-GOOGLE_APPLICATION_CREDENTIALS = '/path/to/your/google-cloud-credentials.json'
+# GOOGLE_APPLICATION_CREDENTIALS = '/path/to/your/google-cloud-credentials.json'
+
+GOOGLE_APPLICATION_CREDENTIALS = '/home/student/Downloads/landtransaction-5ed998c85123.json'
+
 ETHEREUM_NODE_URL = 'http://localhost:8545'  # Update with your Ethereum node URL
+
+
+
 LAND_TRANSACTION_ABI_PATH = os.path.join(BASE_DIR, 'transactions', 'smart_contracts', 'LandTransaction.json')
+
+# settings.py
+
+import os
+
+SMART_CONTRACT_ADDRESS = '0xYourContractAddress'
+
+LAND_TRANSACTION_ABI_PATH = os.path.join(BASE_DIR, 'path/to/your/contract_abi.json')
